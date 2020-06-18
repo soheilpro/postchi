@@ -4,7 +4,7 @@ Send email from the command line using SMTP or major service providers.
 ## Supported Providers
 - [x] [SMTP](https://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol)
 - [x] [SparkPost](https://sparkpost.com)
-- [ ] [Amazon SES](https://aws.amazon.com/ses)
+- [x] [AWS SES](https://aws.amazon.com/ses)
 - [ ] [Mailgun](https://mailgun.com)
 - [ ] [Mailjet](https://mailjet.com)
 - [ ] [Mandrill](https://mandrill.com)
@@ -112,7 +112,7 @@ And you can use them in your email as:
 
 ### Transport
 ```
---transport <smtp|sparkpost> (default: smtp)
+--transport <smtp|sparkpost|ses> (default: smtp)
 ```
 
 ### SMTP
@@ -129,6 +129,13 @@ And you can use them in your email as:
 --sparkpost-apikey <text>
 --sparkpost-open-tracking <boolean> (default: false)
 --sparkpost-click-tracking <boolean> (default: false)
+```
+
+### AWS SES
+```
+--ses-region <text>
+--ses-access-key-id <text>
+--ses-secret-access-key <text>
 ```
 
 ## Version History
